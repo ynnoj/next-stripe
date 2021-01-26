@@ -2,5 +2,18 @@
   "name": "next-stripe",
   "version": "0.0.0-semantically-released",
   "author": "Jonathan Steele <jonathan@steele.pro> (https://steele.pro)",
-  "license": "MIT"
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel src --out-dir dist"
+  },
+  "dependencies": {
+    "@babel/runtime": "7.12.5"
+  },
+  "devDependencies": {
+    "@babel/cli": "7.12.10",
+    "@babel/core": "7.12.10",
+    "@babel/plugin-transform-runtime": "7.12.10",
+    "@babel/preset-env": "7.12.11"
+  }
 }
