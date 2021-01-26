@@ -1,4 +1,6 @@
 {
+  "name": "next-stripe",
+  "version": "0.0.0-semantically-released",
   "author": "Jonathan Steele <jonathan@steele.pro> (https://steele.pro)",
   "license": "MIT"
 }
