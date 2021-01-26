@@ -58,3 +58,8 @@ const session = await createPaymentIntent({
   currency: 'usd'
 })
 ```
+
+## Acknowledgements
+
+- A lot of the patterns in this library were inspred by [NextAuth](https://github.com/nextauthjs/next-auth).
+- Thanks to [Jamie Barton](https://github.com/notrab/next-stripe) for the initial idea.
