@@ -12,6 +12,8 @@ async function NextStripeHandler(req, res, options) {
     switch (type) {
       case 'checkout-session':
         return routes.createCheckoutSession(req, res, options)
+      case 'payment-intent':
+        return routes.createPaymentIntent(req, res, options)
     }
   }
 }
