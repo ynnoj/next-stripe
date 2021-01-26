@@ -5,10 +5,12 @@
   "license": "MIT",
   "main": "index.js",
   "scripts": {
-    "build": "babel src --out-dir dist"
+    "build": "babel src --out-dir dist",
+    "watch": "babel --watch src --out-dir dist"
   },
   "dependencies": {
-    "@babel/runtime": "7.12.5"
+    "@babel/runtime": "7.12.5",
+    "stripe": "8.132.0"
   },
   "devDependencies": {
     "@babel/cli": "7.12.10",
