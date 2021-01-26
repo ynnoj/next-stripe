@@ -15,6 +15,11 @@ async function NextStripeHandler(req, res, options) {
       case 'payment-intent':
         return routes.createPaymentIntent(req, res, options)
     }
+  } else if (method === 'update') {
+    switch (type) {
+      case 'payment-intent':
+        return routes.updatePaymentIntent(req, res, options)
+    }
   }
 }
 
