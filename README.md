@@ -14,7 +14,7 @@ yarn add next-stripe@beta
 
 ### Add the API route
 
-Create a `[...nextstripe.js]` catch-all route in your project's `pages/api/stripe` directory.
+Create a `[...nextstripe].js` catch-all route in your project's `pages/api/stripe` directory.
 
 ```js
 import NextStripe from 'next-stripe'
