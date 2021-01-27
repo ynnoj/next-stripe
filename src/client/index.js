@@ -8,6 +8,13 @@ async function confirmPaymentIntent(id, body) {
   })
 }
 
+async function createBillingPortalSession(body) {
+  return await fetcher({
+    body,
+    method: 'POST',
+    url: `/api/stripe/create/billing-portal-session`
+  })
+}
 async function createCheckoutSession(body) {
   return await fetcher({
     body,
@@ -33,6 +40,7 @@ async function updatePaymentIntent(id, body) {
 }
 
 export default {
+  createBillingPortalSession,
   createCheckoutSession,
   createPaymentIntent,
   updatePaymentIntent
