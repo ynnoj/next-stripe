@@ -34,12 +34,13 @@ async function createPaymentIntent(body) {
 async function updatePaymentIntent(id, body) {
   return await fetcher({
     body: { id, body },
-    method: 'PUT',
+    method: 'POST',
     url: `/api/stripe/update/payment-intent`
   })
 }
 
 export default {
+  confirmPaymentIntent,
   createBillingPortalSession,
   createCheckoutSession,
   createPaymentIntent,
