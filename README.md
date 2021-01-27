@@ -80,6 +80,19 @@ const paymentIntent = await updatePaymentIntent('pi_id', {
 })
 ```
 
+### Billing Portal Sessions
+
+#### Create
+
+```js
+import { createBillingPortalSession } from 'next-stripe/client'
+
+const session = await createBillingPortalSession({
+  customer: 'cus_id',
+  return_url: window.location.href
+})
+```
+
 ## Acknowledgements
 
 - A lot of the patterns in this library were inspred by [NextAuth](https://github.com/nextauthjs/next-auth).

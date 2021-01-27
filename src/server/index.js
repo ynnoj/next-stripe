@@ -15,6 +15,8 @@ async function NextStripeHandler(req, res, options) {
     }
   } else if (method === 'create') {
     switch (type) {
+      case 'billing-portal-session':
+        return routes.createBillingPortalSession(req, res, options)
       case 'checkout-session':
         return routes.createCheckoutSession(req, res, options)
       case 'payment-intent':
