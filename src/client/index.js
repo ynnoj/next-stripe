@@ -40,6 +40,7 @@ async function updatePaymentIntent(id, body) {
 }
 
 export default {
+  confirmPaymentIntent,
   createBillingPortalSession,
   createCheckoutSession,
   createPaymentIntent,
