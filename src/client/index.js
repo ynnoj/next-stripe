@@ -40,4 +40,29 @@ async function createPaymentIntent(body) {
   return res.json()
 }
 
-export default { createCheckoutSession, createPaymentIntent }
+async function updatePaymentIntent(id, body) {
+  const res = await fetch(`/api/stripe/update/payment-intent`, {
+    method: 'PUT',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ id, body })
+  })
+
+  if (!res.ok) {
+    const error = new Error('An error occurred while performing this request.')
+
+    error.info = await res.json()
+    error.status = res.status
+
+    throw error
+  }
+
+  return res.json()
+}
+
+export default {
+  createCheckoutSession,
+  createPaymentIntent,
+  updatePaymentIntent
+}

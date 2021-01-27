@@ -59,6 +59,17 @@ const session = await createPaymentIntent({
 })
 ```
 
+#### Update
+
+```js
+import { updatePaymentIntent } from 'next-stripe/client'
+
+const paymentIntent = await updatePaymentIntent('pi_id', {
+  amount: 1000,
+  currency: 'usd'
+})
+```
+
 ## Acknowledgements
 
 - A lot of the patterns in this library were inspred by [NextAuth](https://github.com/nextauthjs/next-auth).
