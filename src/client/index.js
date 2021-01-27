@@ -42,7 +42,7 @@ async function createPaymentIntent(body) {
 
 async function updatePaymentIntent(id, body) {
   const res = await fetch(`/api/stripe/update/payment-intent`, {
-    method: 'POST',
+    method: 'PUT',
     headers: {
       'Content-Type': 'application/json'
     },
