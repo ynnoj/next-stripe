@@ -75,6 +75,16 @@ const paymentIntent = await confirmPaymentIntent('pi_id', {
 })
 ```
 
+#### Retrieve
+
+[Stripe API Docs](https://stripe.com/docs/api/payment_intents/retrieve)
+
+```js
+import { retrievePaymentIntent } from 'next-stripe/client'
+
+const paymentIntent = await retrievePaymentIntent('pi_id')
+```
+
 #### Update
 
 [Stripe API Docs](https://stripe.com/docs/api/payment_intents/update)
