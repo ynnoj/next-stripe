@@ -1,5 +1,5 @@
 <h3 align="center">
-  next-stripe
+  NextStripe
 </h3>
 
 <p align="center">
