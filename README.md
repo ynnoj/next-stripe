@@ -1,10 +1,10 @@
-<h3 align="center">
+<h2 align="center">
   NextStripe
 </h3>
 
 <p align="center">
-  A convenience library for server side Stripe workflows with Next.js
-</p>
+  Simplified server-side Stripe workflows in Next.js
+</2>
 
 ## Getting Started
 

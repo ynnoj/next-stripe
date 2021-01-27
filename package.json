@@ -1,7 +1,9 @@
 {
   "name": "next-stripe",
   "version": "0.0.0-semantically-released",
+  "description": "Simplified server-side Stripe workflows in Next.js",
   "author": "Jonathan Steele <jonathan@steele.pro> (https://steele.pro)",
+  "repository": "https://github.com/ynnoj/next-stripe.git",
   "license": "MIT",
   "main": "index.js",
   "scripts": {
