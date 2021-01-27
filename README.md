@@ -34,6 +34,8 @@ export default (req, res) => NextStripe(req, res, options)
 
 #### Create
 
+[Stripe API Docs](https://stripe.com/docs/api/checkout/sessions/create)
+
 ```js
 import { createCheckoutSession } from 'next-stripe/client'
 
@@ -50,6 +52,8 @@ const session = await createCheckoutSession({
 
 #### Create
 
+[Stripe API Docs](https://stripe.com/docs/api/payment_intents/create)
+
 ```js
 import { createPaymentIntent } from 'next-stripe/client'
 
@@ -61,6 +65,8 @@ const paymentIntent = await createPaymentIntent({
 
 #### Confirm
 
+[Stripe API Docs](https://stripe.com/docs/api/payment_intents/confirm)
+
 ```js
 import { confirmPaymentIntent } from 'next-stripe/client'
 
@@ -70,6 +76,8 @@ const paymentIntent = await confirmPaymentIntent('pi_id', {
 ```
 
 #### Update
+
+[Stripe API Docs](https://stripe.com/docs/api/payment_intents/update)
 
 ```js
 import { updatePaymentIntent } from 'next-stripe/client'
@@ -83,6 +91,8 @@ const paymentIntent = await updatePaymentIntent('pi_id', {
 ### Billing Portal Sessions
 
 #### Create
+
+[Stripe API Docs](https://stripe.com/docs/api/customer_portal/create)
 
 ```js
 import { createBillingPortalSession } from 'next-stripe/client'
