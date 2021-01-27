@@ -8,7 +8,12 @@ async function NextStripeHandler(req, res, options) {
 
   const [method, type] = req.query.nextstripe
 
-  if (method === 'create') {
+  if (method === 'confirm') {
+    switch (type) {
+      case 'payment-intent':
+        return routes.confirmPaymentIntent(req, res, options)
+    }
+  } else if (method === 'create') {
     switch (type) {
       case 'checkout-session':
         return routes.createCheckoutSession(req, res, options)

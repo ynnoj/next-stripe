@@ -1,5 +1,13 @@
 import fetcher from '../lib/fetcher'
 
+async function confirmPaymentIntent(id, body) {
+  return await fetcher({
+    body: { id, body },
+    method: 'POST',
+    url: `/api/stripe/confirm/payment-intent`
+  })
+}
+
 async function createCheckoutSession(body) {
   return await fetcher({
     body,

@@ -59,6 +59,16 @@ const session = await createPaymentIntent({
 })
 ```
 
+#### Confirm
+
+```js
+import { confirmPaymentIntent } from 'next-stripe/client'
+
+const session = await confirmPaymentIntent('pi_id', {
+  payment_method: 'pm_id'
+})
+```
+
 #### Update
 
 ```js
