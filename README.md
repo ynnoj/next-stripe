@@ -64,7 +64,7 @@ const session = await createPaymentIntent({
 ```js
 import { updatePaymentIntent } from 'next-stripe/client'
 
-const paymentIntent = await updatePaymentIntent('pm_id', {
+const paymentIntent = await updatePaymentIntent('pi_id', {
   amount: 1000,
   currency: 'usd'
 })
