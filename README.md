@@ -28,7 +28,7 @@ export default (req, res) => NextStripe(req, res, options)
 
 ## Usage
 
-`next-stripe/client` exports a selection helper functions to call the Next.js API routes.
+`next-stripe/client` exports helper functions to call the Next.js API routes.
 
 ### Checkout Sessions
 
@@ -53,7 +53,7 @@ const session = await createCheckoutSession({
 ```js
 import { createPaymentIntent } from 'next-stripe/client'
 
-const session = await createPaymentIntent({
+const paymentIntent = await createPaymentIntent({
   amount: 1000,
   currency: 'usd'
 })
@@ -64,7 +64,7 @@ const session = await createPaymentIntent({
 ```js
 import { confirmPaymentIntent } from 'next-stripe/client'
 
-const session = await confirmPaymentIntent('pi_id', {
+const paymentIntent = await confirmPaymentIntent('pi_id', {
   payment_method: 'pm_id'
 })
 ```
