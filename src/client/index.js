@@ -31,6 +31,14 @@ async function createPaymentIntent(body) {
   })
 }
 
+async function retrievePaymentIntent(id) {
+  return await fetcher({
+    body: { id },
+    method: 'GET',
+    url: `/api/stripe/retrieve/payment-intent`
+  })
+}
+
 async function updatePaymentIntent(id, body) {
   return await fetcher({
     body: { id, body },
@@ -44,5 +52,6 @@ export default {
   createBillingPortalSession,
   createCheckoutSession,
   createPaymentIntent,
+  retrievePaymentIntent,
   updatePaymentIntent
 }
