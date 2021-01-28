@@ -4,7 +4,7 @@
 
 <p align="center">
   Simplified server-side Stripe workflows in Next.js
-</2>
+</p>
 
 ## Getting Started
 
