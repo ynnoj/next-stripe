@@ -6,8 +6,7 @@
   Simplified server-side Stripe workflows in Next.js
 </p>
 
-| DISCLAIMER: <br /> This library is currently experimental and should not yet be used to accept live payments! Please star and watch releases to be notified of updates. |
-| --- |
+> ⚠️ PLEASE NOTE: This library is currently in beta and should be used in production with caution!
 
 ## Getting Started
 
