@@ -6,6 +6,8 @@
   Simplified server-side Stripe workflows in Next.js
 </p>
 
+> ⚠️ PLEASE NOTE: This library is currently in beta and should be used in production with caution!
+
 ## Getting Started
 
 ```
