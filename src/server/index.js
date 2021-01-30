@@ -35,8 +35,10 @@ async function NextStripeHandler(req, res, options) {
   }
 }
 
-function NextStripe(...args) {
+export default function NextStripe (...args) {
+  if (args.length === 1) {
+    return (req, res) => NextStripeHandler(req, res, args[0])
+  }
+
   return NextStripeHandler(...args)
 }
-
-export default NextStripe

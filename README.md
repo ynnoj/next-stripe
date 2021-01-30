@@ -21,11 +21,9 @@ Create a `[...nextstripe].js` catch-all route in your project's `pages/api/strip
 ```js
 import NextStripe from 'next-stripe'
 
-const options = {
+export default NextStripe({
   secret_key: process.env.STRIPE_SECRET_KEY
-}
-
-export default (req, res) => NextStripe(req, res, options)
+})
 ```
 
 ## Usage
