@@ -18,12 +18,13 @@ yarn add next-stripe@beta
 
 Create a `[...nextstripe].js` catch-all route in your project's `pages/api/stripe` directory.
 
+> ⚠️ PLEASE NOTE: It is recommended you use a [restricted key](https://stripe.com/docs/keys#limit-access) with limited API access with this library. These keys can be created and configured with the required access in the Stripe Dashboard.
+
 ```js
 import NextStripe from 'next-stripe'
 
 export default NextStripe({
-  secret_key: process.env.STRIPE_SECRET_KEY
-})
+  stripe_key: process.env.STRIPE_RESTRICTED_KEY
 ```
 
 ## Usage

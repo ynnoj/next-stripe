@@ -2,7 +2,7 @@ import Stripe from 'stripe'
 
 export default async function updatePaymentIntent(req, res, options) {
   try {
-    const stripe = new Stripe(options.secret_key)
+    const stripe = new Stripe(options.stripe_key)
 
     const { id, body } = req.body
 
