@@ -1,6 +1,11 @@
+import { INextRequest, INextResponse, IOptions } from '../types/types'
 import * as routes from './routes'
 
-async function NextStripeHandler(req, res, options) {
+export async function NextStripeHandler(
+  req: INextRequest,
+  res: INextResponse,
+  options: IOptions
+) {
   if (!req.query.nextstripe)
     return res
       .status(500)
@@ -11,7 +16,6 @@ async function NextStripeHandler(req, res, options) {
   if (method === 'confirm') {
     switch (type) {
       case 'payment-intent':
-        return routes.confirmPaymentIntent(req, res, options)
     }
   } else if (method === 'create') {
     switch (type) {
@@ -33,12 +37,4 @@ async function NextStripeHandler(req, res, options) {
         return routes.updatePaymentIntent(req, res, options)
     }
   }
-}
-
-export default function NextStripe (...args) {
-  if (args.length === 1) {
-    return (req, res) => NextStripeHandler(req, res, args[0])
-  }
-
-  return NextStripeHandler(...args)
 }
