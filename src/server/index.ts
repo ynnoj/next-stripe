@@ -16,6 +16,7 @@ export async function NextStripeHandler(
   if (method === 'confirm') {
     switch (type) {
       case 'payment-intent':
+        return routes.confirmPaymentIntent(req, res, options)
     }
   } else if (method === 'create') {
     switch (type) {
