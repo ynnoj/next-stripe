@@ -1,6 +1,10 @@
+import Stripe from 'stripe'
 import fetcher from '../lib/fetcher'
 
-async function confirmPaymentIntent(id, body) {
+export async function confirmPaymentIntent(
+  id: string,
+  body: Stripe.PaymentIntentConfirmParams
+): Promise<Stripe.PaymentIntent> {
   return await fetcher({
     body: { id, body },
     method: 'POST',
@@ -8,14 +12,19 @@ async function confirmPaymentIntent(id, body) {
   })
 }
 
-async function createBillingPortalSession(body) {
+export async function createBillingPortalSession(
+  body: Stripe.BillingPortal.SessionCreateParams
+): Promise<Stripe.BillingPortal.Session> {
   return await fetcher({
     body,
     method: 'POST',
     url: `/api/stripe/create/billing-portal-session`
   })
 }
-async function createCheckoutSession(body) {
+
+export async function createCheckoutSession(
+  body: Stripe.Checkout.SessionCreateParams
+): Promise<Stripe.Checkout.Session> {
   return await fetcher({
     body,
     method: 'POST',
@@ -23,7 +32,9 @@ async function createCheckoutSession(body) {
   })
 }
 
-async function createPaymentIntent(body) {
+export async function createPaymentIntent(
+  body: Stripe.PaymentIntentCreateParams
+): Promise<Stripe.PaymentIntent> {
   return await fetcher({
     body,
     method: 'POST',
@@ -31,7 +42,9 @@ async function createPaymentIntent(body) {
   })
 }
 
-async function retrievePaymentIntent(id) {
+export async function retrievePaymentIntent(
+  id: string
+): Promise<Stripe.PaymentIntent> {
   return await fetcher({
     body: { id },
     method: 'GET',
@@ -39,7 +52,10 @@ async function retrievePaymentIntent(id) {
   })
 }
 
-async function updatePaymentIntent(id, body) {
+export async function updatePaymentIntent(
+  id: string,
+  body: Stripe.PaymentIntentUpdateParams
+): Promise<Stripe.PaymentIntent> {
   return await fetcher({
     body: { id, body },
     method: 'POST',
