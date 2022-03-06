@@ -1996,10 +1996,10 @@ string_decoder@~1.1.1:
   dependencies:
     safe-buffer "~5.1.0"
 
-stripe@8.132.0:
-  version "8.132.0"
-  resolved "https://registry.yarnpkg.com/stripe/-/stripe-8.132.0.tgz#3c6403dea9699ee112d515388f7cfbadb2375600"
-  integrity sha512-VFKQJWgPt2X0r/jh4wS6Kgx6/VH1IHw1466wIwahgWzgSANme5iNaJ+1AW45hvRUZJ+T15f2hTfQkQGyP73ZCg==
+stripe@8.207.0:
+  version "8.207.0"
+  resolved "https://registry.yarnpkg.com/stripe/-/stripe-8.207.0.tgz#4b7002f19cecefbc3c48f09f6658c39e359f99c1"
+  integrity sha512-ZCjdqN2adGfrC5uAAo0v7IquzaiQ3+pDzB324/iV3Q3Deiot9VO7KMVSNVx/0i6E6ywhgV33ko3FMT7iUgxKYA==
   dependencies:
     "@types/node" ">=8.1.0"
     qs "^6.6.0"
