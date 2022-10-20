@@ -12,7 +12,14 @@ export default async function createBillingPortalSession(
     const session = await stripe.billingPortal.sessions.create(req.body)
 
     res.status(201).json(session)
-  } catch ({ statusCode, raw: { message } }) {
-    res.status(statusCode).json({ message, status: statusCode })
+  } catch (error) {
+    if (error instanceof Stripe.errors.StripeError)
+      return res
+        .status(error.statusCode!)
+        .json({ message: error.statusCode, status: error.statusCode })
+
+    res
+      .status(500)
+      .json({ message: 'There was a problem with your request', status: 500 })
   }
 }

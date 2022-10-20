@@ -12,7 +12,14 @@ export default async function createPaymentIntent(
     const paymentIntent = await stripe.paymentIntents.create(req.body)
 
     res.status(201).json(paymentIntent)
-  } catch ({ statusCode, raw: { message } }) {
-    res.status(statusCode).json({ message, status: statusCode })
+  } catch (error) {
+    if (error instanceof Stripe.errors.StripeError)
+      return res
+        .status(error.statusCode!)
+        .json({ message: error.statusCode, status: error.statusCode })
+
+    res
+      .status(500)
+      .json({ message: 'There was a problem with your request', status: 500 })
   }
 }
