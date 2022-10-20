@@ -1,0 +1,9 @@
+{
+  "pipeline": {
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": ["dist/**"]
+    }
+  },
+  "globalDependencies": ["tsconfig.json", ".env.*"]
+}

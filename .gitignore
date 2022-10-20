@@ -8,3 +8,6 @@ yarn-error.log*
 
 # Output
 dist
+
+# Turborepo
+.turbo
