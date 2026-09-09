@@ -16,7 +16,7 @@
   ],
   "dependencies": {
     "@babel/runtime": "7.12.5",
-    "stripe": "8.222.0"
+    "stripe": "22.6.2"
   },
   "devDependencies": {
     "@babel/cli": "7.12.10",
